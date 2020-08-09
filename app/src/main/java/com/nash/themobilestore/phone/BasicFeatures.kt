@@ -1,10 +1,14 @@
 package com.nash.themobilestore.phone
 
-interface BasicFeatures {
+open class BasicFeatures {
 
 
-    fun call()
+    fun call(): String {
+        return "This phone has calling feature"
+    }
 
-    fun message()
+    fun message(): String {
+        return "This phone has Messaging feature"
+    }
 
 }

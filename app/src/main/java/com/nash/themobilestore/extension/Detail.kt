@@ -2,11 +2,11 @@ package com.nash.themobilestore.extension
 
 interface Detail {
 
-    fun brandName(basicOrSmart : String)
 
-    fun productSeries()
-    
-    fun productName()
-
+    var brandName : String
+    var productName : String
+    var productSeries : String
+    var price : String
 
 }
+

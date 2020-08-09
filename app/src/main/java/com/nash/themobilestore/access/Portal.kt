@@ -1,10 +1,11 @@
 package com.nash.themobilestore.access
 
-import com.nash.themobilestore.objectmanagement.ObjectCreation
+import com.nash.themobilestore.instancemanagement.InstanceOfClasses
 
 class Portal {
 
-    val objectCreation = ObjectCreation
+    val instanceOfClasses = InstanceOfClasses
+    val mobile = instanceOfClasses.mobile
 
     fun selectYourRole(){
 
@@ -26,11 +27,13 @@ class Portal {
                 "2. Smart Phone")
         val userInput = readLine()?.get(0)
 
-        when(userInput){
-            '1' -> objectCreation.displayPhone.getTheTypeOfPhone("basic")
-            '2' -> objectCreation.displayPhone.getTheTypeOfPhone("smart")
-        }
+//        when(userInput){
+//            '1' -> objectCreation.displayPhone.getTheTypeOfPhone("basic")
+//            '2' -> objectCreation.displayPhone.getTheTypeOfPhone("smart")
+//        }
     }
+
+
 
     private fun admin() {
         println("Do you want to\n" +
@@ -40,21 +43,20 @@ class Portal {
         val adminSelector = readLine()?.get(0)
         when(adminSelector){
             '1' -> basicOrSmart()
+
         }
     }
 
-    private fun basicOrSmart() {
-        println("Your Wish to Enter Basic or Smart\n" +
+      fun basicOrSmart() {
+
+        println("Which Type of Phone Do you want to Add\n" +
                 "1. Basic\n" +
-                "2. Smart\n")
-        val basicOrSmart = readLine()?.get(0)
+                "2. Smart")
 
-        when(basicOrSmart){
-            '1' -> objectCreation.basicPhone.brandName("basic")
-            '2' -> objectCreation.smartPhone.brandName("smart")
+         when(readLine()?.get(0)){
+            '1' -> instanceOfClasses.mobile.addStock("Basic")
+            '2' -> instanceOfClasses.mobile.addStock("Smart")
+        }
+
         }
     }
-
-
-
-}

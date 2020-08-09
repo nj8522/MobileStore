@@ -1,14 +1,20 @@
 package com.nash.themobilestore.main
 
-import com.nash.themobilestore.objectmanagement.ObjectCreation
+import com.nash.themobilestore.database.PreDefinedDataSets
+import com.nash.themobilestore.instancemanagement.InstanceOfClasses
 
 class TheMobileStore
 
 
 fun main(){
 
-    val objectManagement = ObjectCreation
-
-    objectManagement.portal.selectYourRole()
+     val instanceOfClasses = InstanceOfClasses
+     instanceOfClasses.db.phoneDatabase()
+     instanceOfClasses.portal.selectYourRole()
 
 }
+
+
+
+
+
