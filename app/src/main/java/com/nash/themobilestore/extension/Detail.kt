@@ -7,6 +7,7 @@ interface Detail {
     var productName : String
     var productSeries : String
     var price : String
+    var noOfProduct : String
 
 }
 

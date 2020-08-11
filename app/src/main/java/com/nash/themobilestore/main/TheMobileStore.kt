@@ -1,6 +1,5 @@
 package com.nash.themobilestore.main
 
-import com.nash.themobilestore.database.PreDefinedDataSets
 import com.nash.themobilestore.instancemanagement.InstanceOfClasses
 
 class TheMobileStore

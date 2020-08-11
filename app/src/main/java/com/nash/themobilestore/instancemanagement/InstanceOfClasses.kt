@@ -1,10 +1,14 @@
 package com.nash.themobilestore.instancemanagement
 
-import com.nash.themobilestore.mobile.Mobile
+import com.nash.themobilestore.crud.Mobile
 import com.nash.themobilestore.access.Portal
+import com.nash.themobilestore.crud.DeletePhone
+import com.nash.themobilestore.crud.UpdatePhone
+import com.nash.themobilestore.crud.ViewPhone
 import com.nash.themobilestore.database.PreDefinedDataSets
 import com.nash.themobilestore.typesofphone.BasicPhone
 import com.nash.themobilestore.database.PhoneSpecification
+import com.nash.themobilestore.typesofphone.SmartPhone
 
 object InstanceOfClasses {
 
@@ -25,6 +29,15 @@ object InstanceOfClasses {
     //Basic
     val basic = BasicPhone()
 
+    //View Phones
+    val viewPhone = ViewPhone()
+    val smartPhoneList : MutableList<SmartPhone> = mutableListOf()
+    val basicPhoneList : MutableList<BasicPhone> = mutableListOf()
 
+    //Update Phone
+    val updatePhone = UpdatePhone()
+
+    //Delete Phone
+    val deletePhone = DeletePhone()
 
 }
